@@ -33,7 +33,7 @@ class SkyrimBakcpack extends StatelessWidget {
             ),
             const SizedBox(height: 50.0),
             ElevatedButton(
-              onPressed: () => {},
+              onPressed: () => {Navigator.pushNamed(context, '/OpenedChest')},
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(
                   vertical: 15.0,
