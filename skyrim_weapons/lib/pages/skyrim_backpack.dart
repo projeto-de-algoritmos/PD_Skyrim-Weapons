@@ -13,11 +13,15 @@ class SkyrimBakcpack extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Image(
+              image: AssetImage('images/skyrimLogo.png'),
+              width: 150.0,
+            ),
             const Text(
               "Hey, you! You're finally awake.",
               style: title,
             ),
-            const SizedBox(height: 100.0),
+            const SizedBox(height: 40.0),
             const Text(
               'Abra o baú e receba os espólios de sua batalha!',
               style: paragraph
