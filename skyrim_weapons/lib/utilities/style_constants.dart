@@ -20,3 +20,10 @@ const TextStyle button = TextStyle(
   fontSize: 26,
   color: Colors.black,
 );
+
+const TextStyle lootItem = TextStyle(
+  fontFamily: 'Sovngarde',
+  fontWeight: FontWeight.normal,
+  fontSize: 18,
+  color: Colors.black
+);
