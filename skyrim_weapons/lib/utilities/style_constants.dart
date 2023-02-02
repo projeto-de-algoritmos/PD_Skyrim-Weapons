@@ -27,3 +27,10 @@ const TextStyle lootItem = TextStyle(
   fontSize: 18,
   color: Colors.black
 );
+
+const TextStyle lootHeader = TextStyle(
+  fontFamily: 'Sovngarde',
+  fontWeight: FontWeight.bold,
+  fontSize: 20,
+  color: Colors.black
+);
