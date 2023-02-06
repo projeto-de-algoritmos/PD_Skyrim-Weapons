@@ -41,7 +41,7 @@ function findOptimal (totalWeight: number): [number, number[]] {
         }
     })
     
-    return Matrix[weaponData.length][totalWeight];
+    return [Matrix[weaponData.length][totalWeight], Martix];
 }
 
 findOptimal(1);
