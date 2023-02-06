@@ -41,7 +41,36 @@ function findOptimal (totalWeight: number): [number, number[]] {
         }
     })
     
-    return [Matrix[weaponData.length][totalWeight], Martix];
+    return [Matrix[weaponData.length][totalWeight], Matrix];
 }
 
-findOptimal(1);
+function findSolution(Matrix): Weapon[] {
+    let solution: Weapon[] = [];
+    let currentWeapon = weaponData.length - 1;
+    let remainingWeight: number = Matrix[0].length - 1;
+    for (let i = Matrix.length - 1; i >= 0; i--) {
+        let currentWeight = remainingWeight - Math.floor(weaponData[currentWeapon].Weight);
+        if (currentWeight < 0) {
+            currentWeapon -= 1;
+            if (currentWeapon < 0) {
+                currentWeapon = 0;
+            }
+            continue;
+        }
+        if (Matrix[i][remainingWeight] === (weaponData[currentWeapon].Gold + Matrix[i-1][currentWeight])) {
+            solution.push(weaponData[currentWeapon]);
+            remainingWeight -= Math.floor(weaponData[currentWeapon].Weight);            
+        }
+        currentWeapon -= 1;
+        if(currentWeapon < 0) {
+            currentWeapon = 0;
+        }
+    }
+    
+    return solution;
+}
+
+const result = findOptimal(1);
+const solution = findSolution(result[1]);
+
+console.log(solution);
