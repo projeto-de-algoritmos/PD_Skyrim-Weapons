@@ -1,4 +1,3 @@
-import { clear } from "https://deno.land/x/clear/mod.ts";
 import weaponData from './data/skyrim_weapons.json' assert { type: 'json' };
 import Knapsack from "./knapsack.ts";
 import printMenu from "./menu.ts";
